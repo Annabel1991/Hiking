@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>Hiking in Washington State</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+          }
+      
+          .bright-theme {
+            background-image: url("/bright\ th.jpg");
+            color: #0b0101;
+            font-weight: 800;
+            background-repeat: no-repeat;
+          }
+      
+          .dark-theme {
+            background-image: url("/dark\ th.jpg");
+            color: #f2f2f2;
+            font-weight: 600;
+            background-repeat: no-repeat;
+          }
+      
+          .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            box-shadow:  4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+      
+          .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+            margin-top: 20px;
+          }
+      
+          .image-gallery img {
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+          }
+      
+          .image-gallery img:hover {
+            transform: scale(1.1);
+          }
+          button{
+            box-shadow:  1px 2px 0 #FCE9CD;
+            background-color: #DED9CE;
+            color: black;
+            border-radius: 5px;
+            border: #FCE9CD;
+          }
+          ul{
+            list-style:outside none none;
+          }
+          footer{
+            margin: 10px;
+            text-align: center;
+          }
+          footer a{
+            text-decoration: none;
+            color: black;
+          }
+        </style>
+      </head>
+      
+      <body class="bright-theme">
+        <div class="container">
+          <h1>Hiking in Washington State</h1>
+          <button id="themeSwitchBtn" onclick="toggleTheme()">Switch to Dark Theme</button>
+      
+          <h2>Hiking Trail Recommendations</h2>
+          <ul>
+            <li>Mount Rainier National Park</li>
+            <li>Olympic National Park</li>
+            <li>Enchantments</li>
+            <li>North Cascades National Park</li>
+          </ul>
+      
+          <h2>Image Gallery</h2>
+          <div class="image-gallery">
+            <img src="mount-rainier-national-park.jpg" alt="Image of Rainier mount">
+            <img src="olympic-national-park.jpg" alt="Image of Olympic national park">
+            <img src="enchantments.jpg" alt="Enchantments">
+            <img src="north.jpg" alt="Cascades">
+          </div>
+      
+          <h2>Plan Your Adventure</h2>
+          <p>Before you embark on your hiking adventure, make sure to check the weather conditions, trail difficulty, and obtain any necessary permits. Don't forget to bring appropriate gear, sufficient water, and snacks to stay energized throughout your journey. Remember to respect nature and leave no trace behind.</p>
+      
+          <h2>Share Your Hiking Experience</h2>
+          <p>Share your amazing hiking experiences in Washington State with us!</p>
+        </div>
+        <footer>Coded by Anna Bilokon and is
+            <a href="https://github.com/Annabel1991/Hiking"
+              target="_blank">
+              open sourced</a
+            ></footer>
+      
+        <script>
+          function toggleTheme() {
+            var body = document.querySelector('body');
+            var themeSwitchBtn = document.querySelector('#themeSwitchBtn');
+      
+            if (body.classList.contains('bright-theme')) {
+              body.classList.remove('bright-theme');
+              body.classList.add('dark-theme');
+              themeSwitchBtn.innerHTML = 'Switch to Bright Theme';
+            } else {
+              body.classList.remove('dark-theme');
+              body.classList.add('bright-theme');
+              themeSwitchBtn.innerHTML = 'Switch to Dark Theme';
+            }
+          }
+        </script>
+      </body>
+      
+      </html>
